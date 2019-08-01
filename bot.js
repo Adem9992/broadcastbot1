@@ -14,7 +14,7 @@ client.on("message", message => {
   message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
   m.send(`${argresult}\n ${m}`);
   })
-  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\`:mailbox:  عدد المستلمين `);
+  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\`:mailbox:  جاري آرسال البرودكآست `);
   message.delete();
   };
   });
@@ -34,7 +34,7 @@ client.on("message", message => {
     message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
    m.send(`${argresult}\n ${m}`);
   })
-   message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` :mailbox:  عدد المستلمين `); 
+   message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` :mailbox:  جاري آرسال البرودكآست `); 
    message.delete(); 
   };     
   });
@@ -67,7 +67,7 @@ m.sendMessage(args)
 
   client.on('message', msg => {
     if(msg.content === '$help')
-    msg.reply('Check Your DM :white_check_mark:')
+    msg.reply('تفقد الخاص :white_check_mark:')
   });
   
   
@@ -90,7 +90,7 @@ m.sendMessage(args)
    }
    });
 
-const developers = ["472413769700474901","id"]
+const developers = ["408926307372498945","id"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
